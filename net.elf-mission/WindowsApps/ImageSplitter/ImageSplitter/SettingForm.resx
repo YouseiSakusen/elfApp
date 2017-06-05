@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblFileNameForeColor.Text" xml:space="preserve">
+    <value>ファイル名の文字色(&amp;I)</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerOperation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chkShowFinishMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 53</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chkSavePath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;chkCloseViewer.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfCheckBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnColor.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerFileName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbxViewer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 238</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerOperation.Parent" xml:space="preserve">
+    <value>gbxViewer</value>
+  </data>
+  <data name="&gt;&gt;lblViewerFileNameColor.Name" xml:space="preserve">
+    <value>lblViewerFileNameColor</value>
+  </data>
+  <data name="&gt;&gt;cmbFileNamePosition.Parent" xml:space="preserve">
+    <value>gbxViewerFileName</value>
+  </data>
+  <data name="cmbThumbColor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnOk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 402</value>
+  </data>
+  <data name="&gt;&gt;elfCheckBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblFileNamePosition.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfLabel, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chkCloseViewer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbxViewer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 112</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerFileName.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfGroupBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gbxMain.Name" xml:space="preserve">
+    <value>gbxMain</value>
+  </data>
+  <data name="lblFileNameForeColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="elfCheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 16</value>
+  </data>
+  <data name="&gt;&gt;elfCheckBox1.Name" xml:space="preserve">
+    <value>elfCheckBox1</value>
+  </data>
+  <data name="elfLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 45</value>
+  </data>
+  <data name="gbxViewerFileName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="&gt;&gt;elfCheckBox1.Parent" xml:space="preserve">
+    <value>gbxViewerOperation</value>
+  </data>
+  <data name="btnColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <data name="chkShowFinishMsg.Text" xml:space="preserve">
+    <value>一括処理終了時にメッセージを表示する(&amp;M)</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblThumbColor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbxViewer.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkCloseViewer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gbxMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 84</value>
+  </data>
+  <data name="&gt;&gt;lblFileNamePosition.Parent" xml:space="preserve">
+    <value>gbxViewerFileName</value>
+  </data>
+  <data name="chkSavePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 22</value>
+  </data>
+  <data name="chkIsFowardLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbxViewerFileName.Text" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="chkIsFowardLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 23</value>
+  </data>
+  <data name="&gt;&gt;btnColor.Parent" xml:space="preserve">
+    <value>gbxViewerFileName</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="lblFileNameForeColor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkCloseViewer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 72</value>
+  </data>
+  <data name="&gt;&gt;chkSavePath.Name" xml:space="preserve">
+    <value>chkSavePath</value>
+  </data>
+  <data name="&gt;&gt;elfLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gbxMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkCloseViewer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 16</value>
+  </data>
+  <data name="gbxViewerOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblFileNamePosition.Name" xml:space="preserve">
+    <value>lblFileNamePosition</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="lblFileNamePosition.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkIsFowardLeft.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfCheckBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lblThumbColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;cmbThumbColor.Name" xml:space="preserve">
+    <value>cmbThumbColor</value>
+  </data>
+  <data name="lblThumbColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 54</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblThumbColor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbThumbColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 51</value>
+  </data>
+  <data name="lblViewerFileNameColor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="cmbFileNamePosition.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gbxViewerFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 18</value>
+  </data>
+  <data name="&gt;&gt;elfCheckBox1.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfCheckBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblViewerFileNameColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkSavePath.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfCheckBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="chkSavePath.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;elfLabel1.Name" xml:space="preserve">
+    <value>elfLabel1</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="lblFileNameForeColor.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkShowFinishMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 16</value>
+  </data>
+  <data name="&gt;&gt;gbxViewer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingForm</value>
+  </data>
+  <data name="&gt;&gt;btnOk.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblFileNameForeColor.Parent" xml:space="preserve">
+    <value>gbxViewerFileName</value>
+  </data>
+  <data name="gbxMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="lblThumbColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 12</value>
+  </data>
+  <data name="elfCheckBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkIsFowardLeft.Text" xml:space="preserve">
+    <value>次ファイルの表示に左矢印キー(又は左側のクリック)を使用する(&amp;N)</value>
+  </data>
+  <data name="lblThumbColor.Text" xml:space="preserve">
+    <value>サムネイルの色数(&amp;C)</value>
+  </data>
+  <data name="&gt;&gt;chkSavePath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="elfCheckBox1.Text" xml:space="preserve">
+    <value>画像表示モード終了時に問い合わせる(&amp;Q)</value>
+  </data>
+  <data name="&gt;&gt;gbxViewer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;elfLabel1.Parent" xml:space="preserve">
+    <value>gbxViewerOperation</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmbFileNamePosition.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Name" xml:space="preserve">
+    <value>btnOk</value>
+  </data>
+  <data name="btnColor.Text" xml:space="preserve">
+    <value>色の変更...(&amp;R)</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerOperation.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfGroupBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="chkIsFowardLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 16</value>
+  </data>
+  <data name="btnColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblFileNamePosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 21</value>
+  </data>
+  <data name="gbxViewerOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 82</value>
+  </data>
+  <data name="&gt;&gt;lblFileNamePosition.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbxViewerFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>577, 52</value>
+  </data>
+  <data name="elfCheckBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="elfLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerFileName.Name" xml:space="preserve">
+    <value>gbxViewerFileName</value>
+  </data>
+  <data name="&gt;&gt;chkShowFinishMsg.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblViewerFileNameColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 16</value>
+  </data>
+  <data name="&gt;&gt;btnColor.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfButton, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbThumbColor.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfComboBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="elfLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gbxMain.Text" xml:space="preserve">
+    <value>メイン画面</value>
+  </data>
+  <data name="chkIsFowardLeft.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblViewerFileNameColor.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfLabel, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="gbxMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbThumbColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="lblViewerFileNameColor.Text" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="&gt;&gt;lblThumbColor.Name" xml:space="preserve">
+    <value>lblThumbColor</value>
+  </data>
+  <data name="chkIsFowardLeft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;cdgColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnOk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="lblFileNamePosition.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;chkShowFinishMsg.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfCheckBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="elfLabel1.Text" xml:space="preserve">
+    <value>※ チェックを外すと右矢印キー(又は右側のクリック)で次のファイルを表示します</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="elfCheckBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 105</value>
+  </data>
+  <data name="&gt;&gt;gbxViewer.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfGroupBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chkCloseViewer.Name" xml:space="preserve">
+    <value>chkCloseViewer</value>
+  </data>
+  <data name="&gt;&gt;cmbFileNamePosition.Name" xml:space="preserve">
+    <value>cmbFileNamePosition</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerFileName.Parent" xml:space="preserve">
+    <value>gbxViewer</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.ImageSplitter.ImageSplitterBase, ImageSplitter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gbxViewer.Name" xml:space="preserve">
+    <value>gbxViewer</value>
+  </data>
+  <data name="&gt;&gt;btnColor.Name" xml:space="preserve">
+    <value>btnColor</value>
+  </data>
+  <data name="&gt;&gt;chkIsFowardLeft.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="gbxViewerOperation.Text" xml:space="preserve">
+    <value>フルスクリーン表示画面の操作</value>
+  </data>
+  <data name="chkSavePath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblFileNameForeColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblFileNamePosition.Text" xml:space="preserve">
+    <value>ファイル名の位置(&amp;P)</value>
+  </data>
+  <data name="elfLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblFileNamePosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 12</value>
+  </data>
+  <data name="&gt;&gt;lblFileNameForeColor.Name" xml:space="preserve">
+    <value>lblFileNameForeColor</value>
+  </data>
+  <data name="btnOk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkCloseViewer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblFileNameForeColor.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfLabel, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chkCloseViewer.Parent" xml:space="preserve">
+    <value>gbxViewerOperation</value>
+  </data>
+  <data name="&gt;&gt;cmbThumbColor.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkShowFinishMsg.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbxViewerOperation.Name" xml:space="preserve">
+    <value>gbxViewerOperation</value>
+  </data>
+  <data name="cmbFileNamePosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 18</value>
+  </data>
+  <data name="btnOk.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblFileNameForeColor.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblViewerFileNameColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 23</value>
+  </data>
+  <data name="elfCheckBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblViewerFileNameColor.Parent" xml:space="preserve">
+    <value>gbxViewerFileName</value>
+  </data>
+  <data name="&gt;&gt;lblThumbColor.Parent" xml:space="preserve">
+    <value>gbxMain</value>
+  </data>
+  <data name="&gt;&gt;chkSavePath.Parent" xml:space="preserve">
+    <value>gbxMain</value>
+  </data>
+  <data name="lblFileNamePosition.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThumbColor.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cdgColor.Name" xml:space="preserve">
+    <value>cdgColor</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>624, 441</value>
+  </data>
+  <data name="chkSavePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 16</value>
+  </data>
+  <data name="chkCloseViewer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;gbxMain.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfGroupBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="gbxViewerOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>577, 134</value>
+  </data>
+  <data name="&gt;&gt;cmbFileNamePosition.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfComboBox, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbThumbColor.Parent" xml:space="preserve">
+    <value>gbxMain</value>
+  </data>
+  <data name="&gt;&gt;chkIsFowardLeft.Name" xml:space="preserve">
+    <value>chkIsFowardLeft</value>
+  </data>
+  <data name="chkShowFinishMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;elfLabel1.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfLabel, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 402</value>
+  </data>
+  <data name="chkCloseViewer.Text" xml:space="preserve">
+    <value>リストの先頭又は末尾を超えて表示をする場合は画面を閉じる(&amp;S)</value>
+  </data>
+  <data name="&gt;&gt;chkShowFinishMsg.Name" xml:space="preserve">
+    <value>chkShowFinishMsg</value>
+  </data>
+  <data name="chkShowFinishMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnColor.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblFileNameForeColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 12</value>
+  </data>
+  <data name="&gt;&gt;chkShowFinishMsg.Parent" xml:space="preserve">
+    <value>gbxMain</value>
+  </data>
+  <data name="gbxViewer.Text" xml:space="preserve">
+    <value>フルスクリーン表示画面</value>
+  </data>
+  <data name="&gt;&gt;chkIsFowardLeft.Parent" xml:space="preserve">
+    <value>gbxViewerOperation</value>
+  </data>
+  <data name="btnColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>479, 15</value>
+  </data>
+  <data name="lblViewerFileNameColor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkSavePath.Text" xml:space="preserve">
+    <value>前回開いたイメージファイルのフォルダをデフォルトで選択する(&amp;D)</value>
+  </data>
+  <data name="&gt;&gt;gbxMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblThumbColor.Type" xml:space="preserve">
+    <value>net.elfmission.WindowsApps.Controls.elfLabel, elfWindowsAppControlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="elfLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>368, 12</value>
+  </data>
+  <data name="cmbFileNamePosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 20</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cdgColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>
