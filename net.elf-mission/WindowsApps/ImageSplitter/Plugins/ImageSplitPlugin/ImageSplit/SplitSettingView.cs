@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using net.elfmission.WindowsApps;
+using Ookii.Dialogs.WinForms;
 
 namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 {
@@ -10,7 +11,7 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 	/// </summary>
 	internal partial class SplitSettingView : PluginSettingViewBase
 	{
-		#region "メソッド"
+		#region メソッド
 
 		/// <summary>
 		/// 画面の設定値を取得します。
@@ -137,7 +138,7 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 
 		#endregion
 
-		#region "イベント"
+		#region イベント
 
 		/// <summary>
 		/// 中心線除去CheckBoxのCheckedをセットします。
@@ -223,10 +224,25 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 		/// <param name="e">イベントデータを格納しているEventArgs。</param>
 		private void btnRef_Click(object sender, EventArgs e)
 		{
-			if (this.txtSaveTo.Text != string.Empty)
-				this.fbdSplit.SelectedPath = this.txtSaveTo.Text;
-			if (this.fbdSplit.ShowDialog(this.FindForm()) == DialogResult.OK)
-				this.txtSaveTo.Text = fbdSplit.SelectedPath;
+			if (this.txtSaveTo.Text == string.Empty)
+				return;
+
+			using (var dialog = new VistaFolderBrowserDialog()
+				{
+					SelectedPath = this.txtSaveTo.Text,
+					Description = "分割したイメージの出力先を選択してください。",
+					ShowNewFolderButton= true,
+				})
+			{
+				if (dialog.ShowDialog(this.FindForm()) != DialogResult.OK) return;
+
+				this.txtSaveTo.Text = dialog.SelectedPath;
+			}
+
+			//if (this.txtSaveTo.Text != string.Empty)
+			//	this.fbdSplit.SelectedPath = this.txtSaveTo.Text;
+			//if (this.fbdSplit.ShowDialog(this.FindForm()) == DialogResult.OK)
+			//	this.txtSaveTo.Text = fbdSplit.SelectedPath;
 		}
 
 		/// <summary>
@@ -392,7 +408,7 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 
 		#endregion
 
-		#region "コンストラクタ"
+		#region コンストラクタ
 
 		/// <summary>
 		/// コンストラクタ。

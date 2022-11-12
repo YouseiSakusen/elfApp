@@ -4,8 +4,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using net.elfmission.WindowsApps.Controls;
 using Microsoft.WindowsAPICodePack.Taskbar;
+using net.elfmission.WindowsApps.Controls;
+using Ookii.Dialogs.WinForms;
 
 namespace net.elfmission.WindowsApps.ImageSplitter
 {
@@ -497,17 +498,19 @@ namespace net.elfmission.WindowsApps.ImageSplitter
 		/// </summary>
 		private void openImageFolder()
 		{
-			this.fbdMain.SelectedPath = this.getDefaultFolderPath();
-
-			if (this.fbdMain.ShowDialog(this) != DialogResult.OK)
+			using (var dialog = new VistaFolderBrowserDialog()
+				{	SelectedPath = this.getDefaultFolderPath(),
+					Description = "イメージファイルが存在するフォルダを選択してください。",
+				})
 			{
-				return;
-			}
+				if (dialog.ShowDialog(this) != DialogResult.OK)
+					return;
 
-			// 開いたフォルダのパスを設定に保存
-			this.saveOpendPath(this.fbdMain.SelectedPath);
-			// サムネイルを表示
-			this.showThumbNails(this.fbdMain.SelectedPath, Properties.Settings.Default.ThumbNailImageSize);
+				// 開いたフォルダのパスを設定に保存
+				this.saveOpendPath(dialog.SelectedPath);
+				// サムネイルを表示
+				this.showThumbNails(dialog.SelectedPath, Properties.Settings.Default.ThumbNailImageSize);
+			}
 		}
 
 		/// <summary>
@@ -692,7 +695,7 @@ namespace net.elfmission.WindowsApps.ImageSplitter
 
 		#endregion
 
-		#region "コンストラクタ"
+		#region コンストラクタ
 
 		/// <summary>
 		/// コンストラクタ。

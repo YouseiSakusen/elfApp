@@ -64,7 +64,6 @@
 			this.tbtBatch = new System.Windows.Forms.ToolStripDropDownButton();
 			this.tlsSep1 = new System.Windows.Forms.ToolStripSeparator();
 			this.tbtSetting = new System.Windows.Forms.ToolStripButton();
-			this.fbdMain = new System.Windows.Forms.FolderBrowserDialog();
 			this.sttMain = new net.elfmission.WindowsApps.Controls.elfStatusStrip();
 			this.slbImageFolderPath = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tpbPlugin = new System.Windows.Forms.ToolStripProgressBar();
@@ -348,11 +347,6 @@
 			this.tbtSetting.Name = "tbtSetting";
 			this.tbtSetting.Click += new System.EventHandler(this.mniOption_Click);
 			// 
-			// fbdMain
-			// 
-			resources.ApplyResources(this.fbdMain, "fbdMain");
-			this.fbdMain.ShowNewFolderButton = false;
-			// 
 			// sttMain
 			// 
 			this.sttMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -407,7 +401,6 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.FolderBrowserDialog fbdMain;
 		private Controls.elfStatusStrip sttMain;
 		private System.Windows.Forms.ToolStripStatusLabel slbImageFolderPath;
 		private System.Windows.Forms.ToolStripProgressBar tpbPlugin;
