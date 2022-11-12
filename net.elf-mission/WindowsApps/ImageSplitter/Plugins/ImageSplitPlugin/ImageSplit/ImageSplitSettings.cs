@@ -138,57 +138,57 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 			return Path.Combine(destPath, newFileName);
 		}
 
-        /// <summary>
-        /// 保存ファイルの拡張子を取得します。
-        /// </summary>
-        /// <returns>保存ファイルの拡張子を表す文字列。</returns>
-        public string GetFileExtension()
-        {
-            if (this.SaveJpeg)
-                return ".jpg";
-            else
-                return ".bmp";
-        }
+		/// <summary>
+		/// 保存ファイルの拡張子を取得します。
+		/// </summary>
+		/// <returns>保存ファイルの拡張子を表す文字列。</returns>
+		public string GetFileExtension()
+		{
+			if (this.SaveJpeg)
+				return ".jpg";
+			else
+				return ".bmp";
+		}
 
-        /// <summary>
-        /// 拡張子を含むファイル名の後ろ側を取得します。
-        /// </summary>
-        /// <param name="isLeftOrTop">左側又は上側イメージの場合はtrue。右側又は下側の場合はfalseを指定します。</param>
-        /// <returns>拡張子を含むファイル名の後ろ側を表す文字列。</returns>
-        public string GetFileNameRear(bool isLeftOrTop)
-        {
-            var suffix = string.Empty;
+		/// <summary>
+		/// 拡張子を含むファイル名の後ろ側を取得します。
+		/// </summary>
+		/// <param name="isLeftOrTop">左側又は上側イメージの場合はtrue。右側又は下側の場合はfalseを指定します。</param>
+		/// <returns>拡張子を含むファイル名の後ろ側を表す文字列。</returns>
+		public string GetFileNameRear(bool isLeftOrTop)
+		{
+			var suffix = string.Empty;
 
-            switch (this.PageSplitType)
-            {
-                case SplitType.Vertical1_2:
-                case SplitType.Horizontal1_2:
-                    if (isLeftOrTop)
-                    {
-                        suffix = "_1";
-                    }
-                    else
-                    {
-                        suffix = "_2";
-                    }
-                    break;
-                case SplitType.Vertical2_1:
-                case SplitType.Horizontal2_1:
-                    if (isLeftOrTop)
-                    {
-                        suffix = "_2";
-                    }
-                    else
-                    {
-                        suffix = "_1";
-                    }
-                    break;
-                default:
-                    return string.Empty;
-            }
+			switch (this.PageSplitType)
+			{
+				case SplitType.Vertical1_2:
+				case SplitType.Horizontal1_2:
+					if (isLeftOrTop)
+					{
+						suffix = "_1";
+					}
+					else
+					{
+						suffix = "_2";
+					}
+					break;
+				case SplitType.Vertical2_1:
+				case SplitType.Horizontal2_1:
+					if (isLeftOrTop)
+					{
+						suffix = "_2";
+					}
+					else
+					{
+						suffix = "_1";
+					}
+					break;
+				default:
+					return string.Empty;
+			}
 
-            return suffix += this.GetFileExtension();
-        }
+			return suffix += this.GetFileExtension();
+		}
 
 		/// <summary>
 		/// Splitterのファクトリメソッド。

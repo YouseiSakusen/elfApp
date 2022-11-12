@@ -28,7 +28,18 @@ namespace net.elfmission.WindowsApps.Controls
 		/// <summary>
 		/// イメージの形を取得・設定します。
 		/// </summary>
-		public ImagePattern ImagePattern { get; set; } = ImagePattern.Landscape;
+		public ImagePattern ImagePattern { get; set; } = ImagePattern.None;
+
+		/// <summary>
+		/// イメージファイルの存在を取得します。
+		/// </summary>
+		public bool ImageFileExists
+		{
+			get
+			{
+				return File.Exists(this.ImageFilePath);
+			}
+		}
 
 		/// <summary>
 		/// イメージファイルのパスを取得・設定します。

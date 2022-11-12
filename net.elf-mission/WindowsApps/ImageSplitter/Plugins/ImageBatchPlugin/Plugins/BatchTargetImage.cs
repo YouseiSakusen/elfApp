@@ -112,9 +112,9 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins
 		{
 			if (this.TargetImage != null)
 				return this.TargetImage;
-            else
-                return Image.FromFile(this.FilePath);
-        }
+			else
+				return Image.FromFile(this.FilePath);
+		}
 
 		#endregion
 	}

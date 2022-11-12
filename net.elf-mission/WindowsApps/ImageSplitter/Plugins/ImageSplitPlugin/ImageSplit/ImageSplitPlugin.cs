@@ -59,44 +59,44 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 			}
 		}
 
-        #endregion
+		#endregion
 
-        #region "メソッド"
+		#region "メソッド"
 
-        /// <summary>
-        /// 非選択ファイルを処理後のBatchTargetImageに変換します。
-        /// </summary>
-        /// <param name="srcTarget">元イメージのBatchTargetImage。</param>
-        /// <returns>処理後の非選択ファイルを表すBatchTargetImage。</returns>
-        private BatchTargetImage toUnselectedTarge(BatchTargetImage srcTarget)
-        {
-            var ext = string.Empty;
+		/// <summary>
+		/// 非選択ファイルを処理後のBatchTargetImageに変換します。
+		/// </summary>
+		/// <param name="srcTarget">元イメージのBatchTargetImage。</param>
+		/// <returns>処理後の非選択ファイルを表すBatchTargetImage。</returns>
+		private BatchTargetImage toUnselectedTarge(BatchTargetImage srcTarget)
+		{
+			var ext = string.Empty;
 
-            if (this.Settings.UnselectedFilesOperation == UnselectedFilesOperation.CopyFiles)
-                ext = srcTarget.Extension;
-            else
-                ext = this.Settings.GetFileExtension();
+			if (this.Settings.UnselectedFilesOperation == UnselectedFilesOperation.CopyFiles)
+				ext = srcTarget.Extension;
+			else
+				ext = this.Settings.GetFileExtension();
 
-            var fileName = Path.GetFileNameWithoutExtension(srcTarget.FileName) + ext;
-            var destPath = Path.Combine(this.Settings.DestinatedFolderPath, fileName);
+			var fileName = Path.GetFileNameWithoutExtension(srcTarget.FileName) + ext;
+			var destPath = Path.Combine(this.Settings.DestinatedFolderPath, fileName);
 
-            return new BatchTargetImage { FilePath = destPath, Selected = srcTarget.Selected };
-        }
+			return new BatchTargetImage { FilePath = destPath, Selected = srcTarget.Selected };
+		}
 
-        /// <summary>
-        /// 非選択ファイルを新規ファイルとして保存する。
-        /// </summary>
-        /// <param name="target">元イメージのBatchTargetImage。</param>
-        /// <returns>処理後の非選択ファイルを表すBatchTargetImage。</returns>
-        private BatchTargetImage createNewFileFromUnselectedFile(BatchTargetImage target)
-        {
-            var newTarget = this.toUnselectedTarge(target);
+		/// <summary>
+		/// 非選択ファイルを新規ファイルとして保存する。
+		/// </summary>
+		/// <param name="target">元イメージのBatchTargetImage。</param>
+		/// <returns>処理後の非選択ファイルを表すBatchTargetImage。</returns>
+		private BatchTargetImage createNewFileFromUnselectedFile(BatchTargetImage target)
+		{
+			var newTarget = this.toUnselectedTarge(target);
 
-            newTarget.TargetImage = target.GetTargetImage();
-            DefaultImageWriter.SaveImage(newTarget, this.Settings, this.SelectedFilesFinisherEnabled);
+			newTarget.TargetImage = target.GetTargetImage();
+			DefaultImageWriter.SaveImage(newTarget, this.Settings, this.SelectedFilesFinisherEnabled);
 
-            return newTarget;
-        }
+			return newTarget;
+		}
 
 		/// <summary>
 		/// 非選択ファイルをコピーします。
@@ -105,7 +105,7 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 		/// <returns>コピーした非選択ファイルを表すBatchTargetImage。</returns>
 		private BatchTargetImage copyUnselectedFile(BatchTargetImage target)
 		{
-            var retTarget = this.toUnselectedTarge(target);
+			var retTarget = this.toUnselectedTarge(target);
 
 			// 非選択ファイルをコピー
 			File.Copy(target.FilePath, retTarget.FilePath, Settings.IsSkipSameFileName == false);
@@ -140,8 +140,8 @@ namespace net.elfmission.WindowsApps.ImageSplitter.Plugins.ImageSplit
 							retList.Add(this.copyUnselectedFile(target));
 							break;
 						case UnselectedFilesOperation.CreatNewFiles:
-                            // 新規保存
-                            retList.Add(this.createNewFileFromUnselectedFile(target));
+							// 新規保存
+							retList.Add(this.createNewFileFromUnselectedFile(target));
 							break;
 						default:
 							break;

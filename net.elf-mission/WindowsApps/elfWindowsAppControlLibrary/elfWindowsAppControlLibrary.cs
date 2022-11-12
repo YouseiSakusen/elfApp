@@ -64,6 +64,10 @@ namespace net.elfmission.WindowsApps
 	public enum ImagePattern
 	{
 		/// <summary>
+		/// 形無し(初期化用)
+		/// </summary>
+		None,
+		/// <summary>
 		/// 正方形を表します。
 		/// </summary>
 		Square,

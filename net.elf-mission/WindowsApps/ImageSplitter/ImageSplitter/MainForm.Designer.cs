@@ -55,6 +55,8 @@
 			this.mniViewThumbSizeExtraLarge = new System.Windows.Forms.ToolStripMenuItem();
 			this.mniTool = new System.Windows.Forms.ToolStripMenuItem();
 			this.mniOption = new System.Windows.Forms.ToolStripMenuItem();
+			this.mniHelp = new System.Windows.Forms.ToolStripMenuItem();
+			this.mniGoWeb = new System.Windows.Forms.ToolStripMenuItem();
 			this.tlsMain = new net.elfmission.WindowsApps.Controls.elfToolStrip();
 			this.tbtOpen = new System.Windows.Forms.ToolStripButton();
 			this.tbtFullScreenImage = new System.Windows.Forms.ToolStripButton();
@@ -67,8 +69,6 @@
 			this.slbImageFolderPath = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tpbPlugin = new System.Windows.Forms.ToolStripProgressBar();
 			this.slbCount = new System.Windows.Forms.ToolStripStatusLabel();
-			this.mniHelp = new System.Windows.Forms.ToolStripMenuItem();
-			this.mniGoWeb = new System.Windows.Forms.ToolStripMenuItem();
 			this.tscMain.ContentPanel.SuspendLayout();
 			this.tscMain.TopToolStripPanel.SuspendLayout();
 			this.tscMain.SuspendLayout();
@@ -282,6 +282,19 @@
 			resources.ApplyResources(this.mniOption, "mniOption");
 			this.mniOption.Click += new System.EventHandler(this.mniOption_Click);
 			// 
+			// mniHelp
+			// 
+			this.mniHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mniGoWeb});
+			this.mniHelp.Name = "mniHelp";
+			resources.ApplyResources(this.mniHelp, "mniHelp");
+			// 
+			// mniGoWeb
+			// 
+			this.mniGoWeb.Name = "mniGoWeb";
+			resources.ApplyResources(this.mniGoWeb, "mniGoWeb");
+			this.mniGoWeb.Click += new System.EventHandler(this.mniGoWeb_Click);
+			// 
 			// tlsMain
 			// 
 			resources.ApplyResources(this.tlsMain, "tlsMain");
@@ -364,19 +377,6 @@
 			// 
 			this.slbCount.Name = "slbCount";
 			resources.ApplyResources(this.slbCount, "slbCount");
-			// 
-			// mniHelp
-			// 
-			this.mniHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mniGoWeb});
-			this.mniHelp.Name = "mniHelp";
-			resources.ApplyResources(this.mniHelp, "mniHelp");
-			// 
-			// mniGoWeb
-			// 
-			this.mniGoWeb.Name = "mniGoWeb";
-			resources.ApplyResources(this.mniGoWeb, "mniGoWeb");
-			this.mniGoWeb.Click += new System.EventHandler(this.mniGoWeb_Click);
 			// 
 			// MainForm
 			// 

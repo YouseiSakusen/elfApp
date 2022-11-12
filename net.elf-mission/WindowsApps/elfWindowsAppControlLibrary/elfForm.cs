@@ -88,7 +88,8 @@ namespace net.elfmission.WindowsApps
 			// タイトルに製品情報を表示
 			if (this.ShowProductInformationAtTitle)
 			{
-				this.Text = Application.ProductName + " Ver." + Application.ProductVersion.ToString();
+
+				this.Text = Application.ProductName + " Ver." + Application.ProductVersion;
 			}
 		}
 

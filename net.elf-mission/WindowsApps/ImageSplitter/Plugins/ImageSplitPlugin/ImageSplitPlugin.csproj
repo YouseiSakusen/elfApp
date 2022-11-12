@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>net.elfmission.WindowsApps.ImageSplitter.Plugins</RootNamespace>
     <AssemblyName>ImageSplitPlugin</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -80,7 +80,6 @@
     <ProjectReference Include="..\..\..\elfWindowsAppControlLibrary\elfWindowsAppControlLibrary.csproj">
       <Project>{b4167ed9-3cb6-44df-9b82-69e61b8d313f}</Project>
       <Name>elfWindowsAppControlLibrary</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\elfWindowsUtilities\elfWindowsUtilities.csproj">
       <Project>{40f7491e-1924-4268-b112-9f1ab8615717}</Project>
@@ -90,7 +89,6 @@
     <ProjectReference Include="..\ImageBatchPlugin\ImageBatchPlugin.csproj">
       <Project>{3006e7ac-9570-4473-a80b-ec110bc10c20}</Project>
       <Name>ImageBatchPlugin</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

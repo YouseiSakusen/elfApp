@@ -207,6 +207,12 @@ namespace net.elfmission.WindowsApps.ImageSplitter
 
 					// プログレスバーをインクリメント
 					this.tpbPlugin.Increment(1);
+
+					if (! File.Exists(item.FilePath))
+					{
+						continue;
+					}
+
 					TaskbarManager.Instance.SetProgressValue(this.tpbPlugin.Value, targetCount);
 				}
 			}
@@ -566,9 +572,10 @@ namespace net.elfmission.WindowsApps.ImageSplitter
 				{
 					asm = Assembly.LoadFrom(dllPath);
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
 					// DLL読込エラーは無視
+					ExceptionWriter.WriteLog(ex, Path.GetDirectoryName(Application.ExecutablePath));
 					continue;
 				}
 
@@ -600,6 +607,11 @@ namespace net.elfmission.WindowsApps.ImageSplitter
 
 					this.addPluginMenu(plugin);
 				}
+			}
+
+			if (this.tbtBatch.DropDownItems.Count == 0)
+			{
+				this.addPluginMenu(new ImageSplitter.Plugins.ImageSplit.ImageSplitPlugin());
 			}
 		}
 

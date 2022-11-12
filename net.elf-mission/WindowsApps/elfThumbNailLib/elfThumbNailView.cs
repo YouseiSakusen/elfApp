@@ -351,6 +351,10 @@ namespace net.elfmission.WindowsApps.Controls
 
 			foreach (var item in this.itemList)
 			{
+				// イメージパターンが未設定の場合は画像をロード
+				if (item.ImagePattern == ImagePattern.None)
+					this.createThumbNailImage(item, true);
+
 				if (item.ImagePattern == pattern)
 					this.SelectedIndices.Add(item.ItemListIndex);
 			}
@@ -483,8 +487,9 @@ namespace net.elfmission.WindowsApps.Controls
 
 			if (!this.imgList.Images.ContainsKey(targetItem.ImageFilePath))
 			{
-				// サムネイルイメージがImageListに存在しない場合のみ作成して追加
-				this.imgList.Images.Add(targetItem.ImageFilePath, this.createThumbNailImage(targetItem));
+				if (targetItem.ImageFileExists)
+					// サムネイルイメージがImageListに存在しない場合のみ作成して追加
+					this.imgList.Images.Add(targetItem.ImageFilePath, this.createThumbNailImage(targetItem, false));
 			}
 
 			targetItem.ImageIndex = this.imgList.Images.IndexOfKey(targetItem.ImageFilePath);
@@ -593,8 +598,9 @@ namespace net.elfmission.WindowsApps.Controls
 		/// サムネイルイメージを作成します。
 		/// </summary>
 		/// <param name="thumbItem">ListViewに追加するThumbNailItem。</param>
+		/// <param name="notCreateThumb">サムネイルを作成するかを表すbool。</param>
 		/// <returns>作成したサムネイルイメージを表すImage。</returns>
-		private Image createThumbNailImage(ThumbNailItem thumbItem)
+		private Image createThumbNailImage(ThumbNailItem thumbItem, bool notCreateThumb)
 		{
 			Image img = null;
 
@@ -609,6 +615,9 @@ namespace net.elfmission.WindowsApps.Controls
 			}
 
 			thumbItem.ImagePattern = this.getImagePattern(img);
+			if (notCreateThumb)
+				return null;
+
 			Size thumbImgSize = this.getThumbImageSize(img);
 			Bitmap canvas = new Bitmap(this.imgList.ImageSize.Width, this.imgList.ImageSize.Height);
 
@@ -704,22 +713,34 @@ namespace net.elfmission.WindowsApps.Controls
 		/// </summary>
 		private void initThumbNailView()
 		{
-			// イメージリストをクリア
-			base.LargeImageList = null;
-			// リソースを開放
-			this.disposeResources();
+			try
+			{
+				this.BeginUpdate();
 
-			// ImageListを初期化
-			this.initImageList();
-			// 選択アイテムを初期化
-			this.SelectedIndices.Clear();
-			if (! this.VirtualMode)
-				this.SelectedItems.Clear();
+				if ((this.itemList != null) && (0 < this.itemList.Count))
+					this.EnsureVisible(0);
 
-			// アイテムを初期化
-			this.itemList.Clear();
-			this.itemList = new List<ThumbNailItem>();
-			base.Items.Clear();
+				// イメージリストをクリア
+				base.LargeImageList = null;
+				// リソースを開放
+				this.disposeResources();
+
+				// ImageListを初期化
+				this.initImageList();
+				// 選択アイテムを初期化
+				this.SelectedIndices.Clear();
+				if (!this.VirtualMode)
+					this.SelectedItems.Clear();
+
+				// アイテムを初期化
+				this.itemList.Clear();
+				this.itemList = new List<ThumbNailItem>();
+				base.Items.Clear();
+			}
+			finally
+			{
+				this.EndUpdate();
+			}
 		}
 
 		/// <summary>
@@ -746,7 +767,7 @@ namespace net.elfmission.WindowsApps.Controls
 				if (! this.VirtualMode)
 				{
 					// サムネイルイメージを作成　※ 通常モードのみ
-					this.imgList.Images.Add(filePath, this.createThumbNailImage(thumbItem));
+					this.imgList.Images.Add(filePath, this.createThumbNailImage(thumbItem, false));
 					// 仮想モードの場合はImageKeyがクリアされるので通常モードのみセットする
 					thumbItem.ImageKey = filePath;
 					// Viewに追加
